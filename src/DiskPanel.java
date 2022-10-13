@@ -3,22 +3,22 @@ import javax.swing.JPanel;
 
 @SuppressWarnings("serial")
 public class DiskPanel extends JPanel {
-	private int radius = 100;
+  private int radius = 100;
 
-	public int getRadius() {
-		return radius;
-	}
+  public int getRadius() {
+    return radius;
+  }
 
-	public void setRadius(int radius) {
-		this.radius = radius;
-		repaint();                     // イベントキューに登録
-	}
-	
-	@Override
-	protected void paintComponent(Graphics g) {
-		super.paintComponent(g);       // 背景を描画してもらう
-		int x = getWidth()/2-radius;   // 円盤の左上隅の(x,y)
-		int y = getHeight()/2-radius;  // 円盤の左上隅の(x,y)
-		g.fillOval(x, y, radius*2, radius*2);
-	}
+  public void setRadius(int radius) {
+    this.radius = radius;
+    repaint();                                   // イベントキューに登録
+  }
+  
+  @Override
+  protected void paintComponent(Graphics g) {
+    super.paintComponent(g);                     // 背景を描画してもらう
+    int x = getWidth()/2-radius;                 // 円盤の左上隅の(x,y)
+    int y = getHeight()/2-radius;                // 円盤の左上隅の(x,y)
+    g.fillOval(x, y, radius*2, radius*2);
+  }
 }
