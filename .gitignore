@@ -26,4 +26,7 @@ hs_err_pid*
 /*/.DS_Store
 .DS_Store
 /wbp-meta/
+
+# astah lockfile
 *.lock
+
