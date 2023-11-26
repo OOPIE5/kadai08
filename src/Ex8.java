@@ -10,11 +10,10 @@ import java.awt.event.ActionEvent;
 import java.awt.GridLayout;
 
 public class Ex8 {
-
   private JFrame frame;
-  private DiskPanel colorPanel;
-  private CurrentColor crrntBckColor = new CurrentColor();
-  private CurrentColor crrntForColor = new CurrentColor();
+  private DiskPanel colorPanel;                             // JPanelから変更
+  private CurrentColor crrntBckColor = new CurrentColor();  // 背景色
+  private CurrentColor crrntForColor = new CurrentColor();  // 前景色
 
   /**
    * Launch the application.
@@ -47,6 +46,10 @@ public class Ex8 {
     frame.setBounds(100, 100, 450, 300);
     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     
+    colorPanel = new DiskPanel();                           // DiskPanelを作る
+    colorPanel.setBackground(Color.BLACK);
+    frame.getContentPane().add(colorPanel, BorderLayout.CENTER);
+    
     JPanel btnPanel = new JPanel();
     frame.getContentPane().add(btnPanel, BorderLayout.NORTH);
     
@@ -76,10 +79,6 @@ public class Ex8 {
       }
     });
     btnPanel.add(btnBlue);
-    
-    colorPanel = new DiskPanel();
-    colorPanel.setBackground(Color.BLACK);
-    frame.getContentPane().add(colorPanel, BorderLayout.CENTER);
     
     JPanel btmPanel = new JPanel();
     frame.getContentPane().add(btmPanel, BorderLayout.SOUTH);
@@ -142,5 +141,4 @@ public class Ex8 {
     });
     szPanel.add(btnSmall);
   }
-
 }

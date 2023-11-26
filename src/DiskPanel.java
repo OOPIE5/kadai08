@@ -17,8 +17,8 @@ public class DiskPanel extends JPanel {
   @Override
   protected void paintComponent(Graphics g) {
     super.paintComponent(g);                     // 背景を描画してもらう
-    int x = getWidth()/2-radius;                 // 円盤の左上隅の(x,y)
-    int y = getHeight()/2-radius;                // 円盤の左上隅の(x,y)
+    int x = getWidth()/2-radius;                 // 円盤の左上隅のx座標
+    int y = getHeight()/2-radius;                // 円盤の左上隅のy座標
     g.fillOval(x, y, radius*2, radius*2);
   }
 }
