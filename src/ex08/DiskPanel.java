@@ -1,3 +1,5 @@
+package ex08;
+
 import java.awt.Graphics;
 import javax.swing.JPanel;
 
